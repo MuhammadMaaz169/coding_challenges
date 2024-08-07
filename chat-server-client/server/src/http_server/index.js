@@ -1,8 +1,11 @@
+import { AsymmetricAuthentication } from "../common/jwt-manager.js";
 import { config } from "../config/index.js";
 import { initializeRoutes } from "./plugins/initializeRoute.js";
 import { initSwagger } from "./plugins/swagger.js";
 
 export const configureHttpServer = async (app) => {
+
+    AsymmetricAuthentication.initializeKeyStore();
 
     app.register(initSwagger);
 	app.register(initializeRoutes, { prefix: `api/${config.apiVersion}` });
