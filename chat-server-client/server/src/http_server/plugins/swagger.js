@@ -6,8 +6,7 @@ export const initSwagger = fastifyPlugin((fastify, _, done) => {
     const opts = {
         swagger: {
             info: {
-                title: 'HSS_Modules',
-                description: 'HSS_Modules',
+                title: 'Chat server',
                 version: '1.0.0',
             },
             consumes: ['application/json'],

@@ -39,7 +39,7 @@ export class AsymmetricAuthentication {
     return this.keyStore.toJSON(true);
   }
 
-  static async createAsymmetricSignedJwtToken(payload, expiryTimeInSeconds = null) {
+  static async createAsymmetricSignedJwtToken(payload, expiryTimeInSeconds) {
     if (!this.keyStore) await this.initializeKeyStore();
 
     const currentTimeInSeconds = getCurrentTimeInSeconds();

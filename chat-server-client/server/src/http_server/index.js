@@ -1,4 +1,5 @@
 import { AsymmetricAuthentication } from "../common/jwt-manager.js";
+import { fail } from "../common/response.js";
 import { config } from "../config/index.js";
 import { initializeRoutes } from "./plugins/initializeRoute.js";
 import { initSwagger } from "./plugins/swagger.js";
@@ -18,11 +19,7 @@ export const configureHttpServer = async (app) => {
 
     app.setErrorHandler((error, request, reply) => {
         const status = error.statusCode ?? 500;
-        const message = status === 500 ? 'Something went wrong' : error.message ?? 'Something went wrong';
-        app.log.error(
-            `[${request.method}] ${request.url} >> StatusCode:: ${status || 500}, Message:: ${error.message || 'Something went wrong'}`
-        );
-        return fail(reply, { message }, status);
+        return fail(reply, { message: error.message }, status);
     });
 
     await app.listen({ port: 3000 })
