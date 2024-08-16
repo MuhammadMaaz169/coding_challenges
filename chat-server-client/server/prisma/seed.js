@@ -8,7 +8,7 @@ async function main() {
         create: {
             email: 'user1@gmail.com',
             name: 'user1',
-            pass: '1324',
+            pass: '1234',
         },
     })
 
@@ -18,7 +18,7 @@ async function main() {
         create: {
             email: 'user2@gmail.com',
             name: 'user2',
-            pass: '1324',
+            pass: '1234',
         },
     })
 

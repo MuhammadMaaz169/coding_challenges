@@ -7,6 +7,7 @@ export const defaultRoute = (fastify, _, done) => {
     method: 'GET',
     url: path,
     schema: {
+      tags: ['default'],
       response: {
         200: {
           description: 'Successful response',
@@ -26,5 +27,4 @@ export const defaultRoute = (fastify, _, done) => {
     handler: defaultController,
   });
   done();
-}
-
+};
