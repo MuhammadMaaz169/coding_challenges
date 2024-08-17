@@ -12,3 +12,8 @@ export const login = async (req, reply) => {
 
   return success(reply, { accessToken, refreshToken }, HttpStatusCode.Ok);
 };
+
+export const testAuthentication = async (req, reply) => {
+
+  return success(reply, { message: 'Successfully authenticated!' }, HttpStatusCode.Ok);
+};

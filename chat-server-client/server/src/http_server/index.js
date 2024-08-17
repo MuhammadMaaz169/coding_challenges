@@ -11,12 +11,6 @@ export const configureHttpServer = async (app) => {
     app.register(initSwagger);
 	app.register(initializeRoutes, { prefix: `api/${config.apiVersion}` });
 
-    // app
-    //     .get('/', (request, reply, next) => {
-    //         reply.status(200).send('Hello, world');
-    //     })
-    // .use('/api', api())
-
     app.setErrorHandler((error, request, reply) => {
         const status = error.statusCode ?? 500;
         return fail(reply, { message: error.message }, status);
