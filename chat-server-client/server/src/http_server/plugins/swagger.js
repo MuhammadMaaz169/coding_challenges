@@ -30,7 +30,7 @@ export const initSwagger = fastifyPlugin((fastify, _, done) => {
     fastify.register(fastifySwagger, opts);
 
     const uiOpts = {
-        routePrefix: '/',
+        routePrefix: '/api-docs',
         staticCSP: true,
         transformStaticCSP: (header) => header,
         uiConfig: {
