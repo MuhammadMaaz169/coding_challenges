@@ -1,6 +1,6 @@
 import { HttpStatusCode } from 'axios';
-import { CustomError } from '../../common/custom-error.js';
-import { AsymmetricAuthentication } from '../../common/jwt-manager.js';
+import { CustomError } from './custom-error.js';
+import { AsymmetricAuthentication } from './jwt-manager.js';
 
 export const auth = async (req, reply) => {
   const token = req.headers['authorization'];

@@ -1,4 +1,4 @@
-import { auth } from '../auth.middleware.js';
+import { auth } from '../../../common/auth.middleware.js';
 import { login, testAuthentication } from './auth.controller.js';
 
 export const authRoutes = (fastify, _, done) => {
