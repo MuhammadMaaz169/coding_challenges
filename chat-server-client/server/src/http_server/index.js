@@ -17,5 +17,5 @@ export const configureHttpServer = async (app) => {
         return fail(reply, { message: error.message }, status);
     });
 
-    await app.listen({ port: 3000 })
+    await app.listen({ port: 4000 })
 };
