@@ -1,77 +1,68 @@
-# Boilerplate and Starter for React JS 18+, Material-UI, Tailwind CSS v3.3 and Typescript
+# IMPORTANT UPDATE 2024-05-01
 
-<p align="center">
-<img src="public/assets/imgs/banner.png?raw=true" alt="React js starter banner" />
-</p>
+Better use [Vite + React + MUI starter](https://github.com/karpolan/react-mui-vite-ts) instead of this one.
 
-🚀🚀🚀 Boilerplate and Starter for React.js, Material-UI, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: React.js, TypeScript, Axios, ESLint, Prettier, Husky, Lint-Staged, VSCode, PostCSS, Tailwind CSS.
+Reasons:
+- [Create React App](https://create-react-app.dev/) is **not popular** anymore.
+- **TypeScript** is more predictable than JavaScript for React application development and maintenance.
+- Development and debugging using **[Vite](https://vitejs.dev/)** is 10x faster than with Webpack.
 
-Clone this project and use it to create your own [React.js](https://nextjs.org) project.
 
-### Features
 
-- ⚡ [React.js](https://react.dev/)
-- ⚡ [Material-UI](https://mui.com/)
-- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
-- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
-- ✅ Strict Mode for TypeScript and React 18
-- 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
-- 💖 Code Formatter with [Prettier](https://prettier.io)
-- 🦊 Husky for Git Hooks
-- 🚫 Lint-staged for running linters on Git staged files
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
+# React + Material UI Professional starter
 
-### Requirements
+Mix of [Create React App](https://github.com/facebook/create-react-app) and [Material UI](https://mui.com) with set of reusable components and utilities to build professional React Application faster.
 
-- Node.js 16+ and pnpm
+- [Source Code](https://github.com/karpolan/react-mui-pro-starter)
+- [Online Demo](https://react-mui-pro-starter.netlify.app/)
 
-### Getting started
+## How to use
 
-Run the following command on your local environment:
+1. Clone or download the repo from: https://github.com/karpolan/react-mui-pro-starter
+2. Copy `env.sample` to `.env`, or at least set `env.REACT_APP_LOG_LEVEL` = `DEBUG` | `INFO` | `WARN` | `ERROR` variable
+3. Replace `_TITLE_` and `_DESCRIPTION_` in all files with own texts
+4. Create **Favorite Icon** images and put them into `/public/img/favicon`, the **favicon.ico** file should be paced into root of `/public` folder.
+5. Add your own code :)
 
-```shell
-git clone --depth=1 https://github.com/sonht113/react-boilerplate-for-starter.git
-cd my-project-name
-pnpm install
-```
+## Available Scripts
 
-Then, you can run locally in development mode with live reload:
+In the project directory, you can run:
 
-```shell
-pnpm run dev
-```
+### `npm start` or `npm run dev`
 
-Open http://localhost:5173 with your favorite browser to see your project.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```shell
-.
-├── README.md                       # README file
-├── .github                         # GitHub folder
-├── .husky                          # Husky configuration
-├── public                          # Public assets folder
-├── src
-│   ├── apis                        # Common apis folder
-│   ├── components                  # Component folder
-│   ├── data                        # Data constants JS Pages
-│   └── features                    # Features folder
-│   ├── hooks                       # Hooks customs folder
-│   ├── layout                      # Layout Pages
-│   └── pages                       # React JS Pages
-│   ├── provider                    # Provider folder
-│   └── routes                      # Routes folder
-│   ├── ts                          # Type and Enum folder
-│   ├── utils                       # Utility functions
-├── tailwind.config.js              # Tailwind CSS configuration
-└── tsconfig.json                   # TypeScript configuration
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### Customization
+### `npm run lint`
 
-- `src/index.css`: your CSS file using Tailwind CSS
-- `src/main.tsx`: default theme
+Checks the code for errors and missing things
 
-You have access to the whole code source if you need further customization. The provided code is only example for you to start your project. The sky is the limit 🚀.
+### `npm run format`
 
----
+Formats the code according to `./prettierrc.js` config
 
-Made with ♥ by [TrongSon](https://www.facebook.com/profile.php?id=100032736788526&locale=vi_VN)
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
